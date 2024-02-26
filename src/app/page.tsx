@@ -1,7 +1,14 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Blog</h1>
+    <div className="main-container">
+      <div className="main-left">
+        <Link href="/myNote">My Note</Link>
+      </div>
+      <div className="main-right">
+        <Link href="/notes">Developers Notes</Link>
+      </div>
     </div>
   );
 }
