@@ -31,3 +31,16 @@
   font-size: 60px;
   font-weight: 600;
 }
+
+.notes {
+  width: 100vw;
+  height: 100vh;
+}
+
+.notes-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 1600px;
+  background-color: aqua;
+}
