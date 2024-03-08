@@ -39,7 +39,8 @@
 
 .notes-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 80%;
 }
 
@@ -47,39 +48,46 @@
   width: 300px;
   height: 200px;
   background-color: #ebb699;
+  margin-bottom: 40px;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
-  .main-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+  .notes-item {
+    width: 275px;
+    height: 200px;
+    background-color: #ebb699;
+    margin-bottom: 40px;
   }
 }
 
 /* 테블릿 가로 (해상도 768px ~ 1023px)*/
-/* @media all and (min-width: 768px) and (max-width: 1023px) {
-  .main-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .notes-item {
+    width: 275px;
+    height: 200px;
+    background-color: #ebb699;
+    margin: auto;
+    margin-bottom: 40px;
   }
-} */
+}
 
 /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-/* @media all and (min-width: 480px) and (max-width: 767px) {
-  .main-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .notes-item {
+    width: 275px;
+    height: 200px;
+    background-color: #ebb699;
+    margin: auto;
+    margin-bottom: 40px;
   }
-} */
+}
 
 /* 모바일 세로 (해상도 ~ 479px)*/
-/* @media all and (max-width: 479px) {
-  .main-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+@media all and (max-width: 479px) {
+  .notes-item {
+    width: 100%;
+    height: 200px;
+    background-color: #ebb699;
+    margin-bottom: 40px;
   }
-} */
+}

@@ -6,7 +6,7 @@ export default function Notes() {
         {data.map((item, i) => {
           return (
             <div className="notes-item" key={i}>
-              <span>{item.name}</span>
+              <h2>{item.name}</h2>
             </div>
           );
         })}
