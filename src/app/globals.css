@@ -52,6 +52,24 @@
   margin-bottom: 40px;
 }
 
+.toggle-container-On {
+  transtion-delay: 1s; /* 시작 전 딜레이 */
+  transtion-duration: 0.5s; /* transition 작동 속도 */
+  transtion-property: opacity; /* 어떤 속성에 transition 입힐건지 */
+  transtion-timing-function: ease-in; /* 동작 속도 그래프 조정 */
+}
+
+.toggle-container-Off {
+  display: none;
+}
+
+.toggle-item {
+  text-align: center;
+  padding: 15px;
+  height: 50px;
+  background-color: beige;
+}
+
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   .notes-item {
     width: 275px;
