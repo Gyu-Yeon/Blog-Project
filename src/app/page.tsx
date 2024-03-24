@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div className="main-container">
       <div className="main-left">
-        <Link href="/myNote">My Note</Link>
+        <Link href="/main/myNote">My Note</Link>
       </div>
       <div className="main-right">
-        <Link href="/notes">Developers Notes</Link>
+        <Link href="/main/notes">Developers Notes</Link>
       </div>
     </div>
   );

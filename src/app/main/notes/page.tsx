@@ -1,4 +1,4 @@
-import { connectDB } from "../../../util/database";
+import { connectDB } from "../../../../util/database";
 
 export default async function Notes() {
   let db = (await connectDB).db("blog");

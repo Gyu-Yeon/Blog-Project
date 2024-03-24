@@ -9,15 +9,11 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import ToggleContainer from "./myNote/Components/ToggleContainer";
-
-type props = {
-  title: string;
-};
+import ToggleContainer from "./ToggleContainer";
 
 type toggleType = boolean;
 
-export default function ButtonAppBar(props: props) {
+export default function ButtonAppBar() {
   const [toggle, setToggle] = useState<toggleType>(false);
 
   const onchangeToggle = () => {
@@ -39,14 +35,16 @@ export default function ButtonAppBar(props: props) {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              {props.title}
-            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            ></Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </Box>
-      <ToggleContainer toggle={toggle} />
+      <ToggleContainer toggle={toggle} setToggle={onchangeToggle} />
     </React.Fragment>
   );
 }
