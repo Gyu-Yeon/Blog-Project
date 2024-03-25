@@ -1,13 +1,25 @@
+"use-client";
+
 export default function Write() {
   return (
     <div
       className="d-flex mt-6"
       style={{
-        backgroundColor: "firebrick",
+        backgroundColor: "green",
         width: "90vw",
         height: "80vh",
         margin: "auto",
+        marginTop: "100px",
       }}
-    ></div>
+    >
+      <textarea
+        style={{
+          display: "flex",
+          width: "80%",
+          height: "90%",
+          margin: "auto",
+        }}
+      />
+    </div>
   );
 }
