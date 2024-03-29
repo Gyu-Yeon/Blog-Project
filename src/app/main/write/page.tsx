@@ -1,25 +1,9 @@
-"use-client";
+import Write from "./Wrtie";
 
-export default function Write() {
+export default function Writepage() {
   return (
-    <div
-      className="d-flex mt-6"
-      style={{
-        backgroundColor: "green",
-        width: "90vw",
-        height: "80vh",
-        margin: "auto",
-        marginTop: "100px",
-      }}
-    >
-      <textarea
-        style={{
-          display: "flex",
-          width: "80%",
-          height: "90%",
-          margin: "auto",
-        }}
-      />
+    <div style={{ background: "#7CBEFF" }}>
+      <Write />
     </div>
   );
 }

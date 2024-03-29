@@ -5,7 +5,7 @@ import SendIcon from "@mui/icons-material/Send";
 export default function IconLabelButtons() {
   return (
     <Button variant="contained" endIcon={<SendIcon />}>
-      Write
+      글 쓰러 가기
     </Button>
   );
 }
