@@ -14,8 +14,8 @@ export default async function MyNote() {
     const day = date.getDate();
     const year = date.getFullYear();
 
-    const result = { month, day, year };
-    return `작성일자: ${result.year}년 ${result.month}월 ${result.day}일 `;
+    const dateResult = { month, day, year };
+    return `작성일자: ${dateResult.year}년 ${dateResult.month}월 ${dateResult.day}일 `;
   };
 
   console.log(result);
@@ -40,20 +40,22 @@ export default async function MyNote() {
         <section style={{ overflow: "auto" }}>
           {result.map((item, i) => {
             return (
-              <div
-                className="m-auto mb-5 d-flex"
-                style={{
-                  width: "90%",
-                  height: "150px",
-                  backgroundColor: "skyblue",
-                }}
-                key={i}
-              >
-                <div className="p-5">
-                  <h2>{item.title}</h2>
-                  <h2>{filterDateParts(item.date)}</h2>
+              <Link key={item.id} href={`/detail/${item._id}`}>
+                <div
+                  className="m-auto mb-5 d-flex"
+                  style={{
+                    width: "90%",
+                    height: "150px",
+                    backgroundColor: "skyblue",
+                  }}
+                  key={item.id}
+                >
+                  <div className="p-5">
+                    <h2>{item.title}</h2>
+                    <h2>{filterDateParts(item.date)}</h2>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </section>
