@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { connectDB } from "../../../../util/database";
+import { connectDB } from "../../../../../util/database";
 
 type DetailProps = {
   params: any;
@@ -16,7 +16,8 @@ export default async function Detail(props: DetailProps) {
       style={{
         display: "flex",
         width: "100vw",
-        height: "100vh",
+        height: "500px",
+        maxHeight: "800px",
         justifyContent: "center",
         alignItems: "center",
       }}

@@ -20,7 +20,7 @@ export default async function MyNote() {
 
   console.log(result);
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw" }}>
       <header
         style={{
           display: "flex",
@@ -40,7 +40,7 @@ export default async function MyNote() {
         <section style={{ overflow: "auto" }}>
           {result.map((item, i) => {
             return (
-              <Link key={item.id} href={`/detail/${item._id}`}>
+              <Link key={item.id} href={`/main/detail/${item._id}`}>
                 <div
                   className="m-auto mb-5 d-flex"
                   style={{
