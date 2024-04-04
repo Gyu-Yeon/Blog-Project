@@ -18,7 +18,7 @@ export default async function MyNote() {
     return `작성일자: ${dateResult.year}년 ${dateResult.month}월 ${dateResult.day}일 `;
   };
 
-  console.log(result);
+  // console.log(result);
   return (
     <div style={{ width: "100vw" }}>
       <header

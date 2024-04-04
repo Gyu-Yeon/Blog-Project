@@ -1,8 +1,8 @@
-import Write from "./Wrtie";
+import Write from "../../Components/Write";
 
 export default function Writepage() {
   return (
-    <div style={{ background: "#7CBEFF" }}>
+    <div style={{ backgroundColor: "skyblue" }}>
       <Write />
     </div>
   );
