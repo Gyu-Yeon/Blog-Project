@@ -17,10 +17,10 @@ export default function ToggleContainer(props: Props) {
 
   return (
     <div className={toggle ? "hidden" : "toggle-container-On"}>
-      <Link href="/">
+      <Link href="/" onClick={() => setToggle(false)}>
         <div className="toggle-item">Home</div>
       </Link>
-      <Link href="/main/myNote">
+      <Link href="/main/myNote" onClick={() => setToggle(false)}>
         <div className="toggle-item">My Notes</div>
       </Link>
     </div>
