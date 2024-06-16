@@ -13,42 +13,19 @@ export default function Detail(props: DetailProps) {
   const { writing } = props;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "93vh",
-        backgroundColor: "skyblue",
-      }}
-    >
-      <div
-        style={{
-          width: "80%",
-          marginTop: "100px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: "white",
-          }}
-          className="mb-5"
-        >
+    <div className="detailContainer">
+      <div style={{ width: "80%", marginTop: "100px" }}>
+        <div className="mb-5 detailInputContainer">
           <span style={{ marginRight: "30px" }}>제목</span>
-          <div style={{ width: "85%" }}>{writing?.title}</div>
+          <div style={{ width: "85%", backgroundColor: "white" }}>
+            {writing?.title}
+          </div>
         </div>
-        <div
-          className="mb-6"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: "white",
-          }}
-        >
+        <div className="mb-6 detailInputContainer">
           <div style={{ marginRight: "30px" }}>내용</div>
-          <div style={{ width: "85%", height: "600px" }}>
+          <div
+            style={{ width: "85%", height: "600px", backgroundColor: "white" }}
+          >
             {writing?.content}
           </div>
         </div>

@@ -16,7 +16,7 @@ export default async function MyNote() {
         }}
       >
         <div>
-          <Link href="/main/write">
+          <Link data-cy="write" href="/main/write">
             <IconLabelButtons />
           </Link>
         </div>

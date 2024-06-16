@@ -17,30 +17,28 @@ export default async function List() {
     return `작성일자: ${dateResult.year}년 ${dateResult.month}월 ${dateResult.day}일 `;
   };
 
+  const writes = result.map((write) => (
+    <Link key={write.id} href={`/main/detail/${write._id}`}>
+      <div
+        className="m-auto mb-5 d-flex"
+        style={{
+          width: "90%",
+          height: "150px",
+          backgroundColor: "skyblue",
+        }}
+        key={write.id}
+      >
+        <div className="p-5">
+          <h2>{write.title}</h2>
+          <h2>{filterDateParts(write.date)}</h2>
+        </div>
+      </div>
+    </Link>
+  ));
+
   return (
     <main className="d-flex m-auto" style={{ width: "75%", height: "100%" }}>
-      <section style={{ overflow: "auto" }}>
-        {result.map((item, i) => {
-          return (
-            <Link key={item.id} href={`/main/detail/${item._id}`}>
-              <div
-                className="m-auto mb-5 d-flex"
-                style={{
-                  width: "90%",
-                  height: "150px",
-                  backgroundColor: "skyblue",
-                }}
-                key={item.id}
-              >
-                <div className="p-5">
-                  <h2>{item.title}</h2>
-                  <h2>{filterDateParts(item.date)}</h2>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </section>
+      <section style={{ overflow: "auto" }}>{writes}</section>
     </main>
   );
 }

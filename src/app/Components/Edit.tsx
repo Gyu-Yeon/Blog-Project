@@ -3,6 +3,7 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import Link from "next/link";
 
 type EditProps = {
   writing: any;
@@ -70,7 +71,7 @@ export default function Edit(props: EditProps) {
           </div>
           <div
             className="mb-5"
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{ display: "flex", justifyContent: "space-evenly" }}
           >
             <Button
               style={{ width: "30%" }}
@@ -79,6 +80,15 @@ export default function Edit(props: EditProps) {
               endIcon={<SendIcon />}
             >
               발행하기
+            </Button>
+            <Button
+              className="danger"
+              style={{ width: "30%" }}
+              type="submit"
+              variant="contained"
+              endIcon={<SendIcon />}
+            >
+              취소하기
             </Button>
           </div>
         </div>

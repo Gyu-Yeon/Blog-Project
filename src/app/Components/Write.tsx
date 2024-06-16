@@ -40,6 +40,7 @@ export default function Write() {
           >
             <span style={{ marginRight: "30px" }}>제목</span>
             <input
+              data-cy="title"
               style={{ width: "85%" }}
               type="text"
               value={titleInput}
@@ -53,6 +54,7 @@ export default function Write() {
           >
             <div style={{ marginRight: "30px" }}>내용</div>
             <textarea
+              data-cy="content"
               style={{ width: "85%", height: "600px", resize: "none" }}
               value={contentInput}
               name="content"

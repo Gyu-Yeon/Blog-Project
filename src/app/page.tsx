@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="main-container">
-      <div className="main-left">
+      <div data-cy="main" className="main-left">
         <Link href="/main/myNote">My Note</Link>
       </div>
       <div className="main-right">
